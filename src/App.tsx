@@ -85,8 +85,12 @@ function App() {
 
     return (
         <>
-            <div className="flex justify-center items-center bg-[#323437] absolute top-0 left-0 right-0 bottom-0 z-10 text-white font-bold text-4xl text-center max-w-lg mx-auto lg:hidden">
-                Sorry, this website should be accessed only on your PC/Laptop !
+            <div className="flex justify-center items-center bg-[#323437] absolute top-0 left-0 right-0 bottom-0 z-10 px-5 text-white text-4xl text-center max-w-lg mx-auto lg:hidden">
+                <div>
+                    We're sorry, but this website is <span className="text-emerald-300">best viewed</span> on a{' '}
+                    <span className="text-emerald-300">PC or laptop</span>. Please switch to one of these devices for
+                    the <span className="text-emerald-300">optimal experience</span>.
+                </div>
             </div>
 
             <input
@@ -113,7 +117,7 @@ function App() {
                                     className={`${
                                         inputValue.charAt(index) &&
                                         (character === inputValue.charAt(index) ? '' : 'text-red-500')
-                                    } ${inputValue.length === index ? 'current' : ''} ${
+                                    } ${inputValue.length === index ? 'current-character' : ''} ${
                                         index <= inputValue.length ? 'opacity-100' : 'opacity-35'
                                     }`}
                                     key={index}>
