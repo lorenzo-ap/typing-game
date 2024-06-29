@@ -85,6 +85,10 @@ function App() {
 
     return (
         <>
+            <div className="flex justify-center items-center bg-[#323437] absolute top-0 left-0 right-0 bottom-0 z-10 text-white font-bold text-4xl text-center max-w-lg mx-auto lg:hidden">
+                Sorry, this website should be accessed only on your PC/Laptop !
+            </div>
+
             <input
                 className="visually-hidden"
                 type="text"
@@ -95,7 +99,7 @@ function App() {
                 onBlur={() => setIsFocused(false)}
             />
 
-            <div className="px-60 py-36">
+            <div className="px-60 py-36 hidden lg:block">
                 <div className="relative">
                     <div
                         className={`${
